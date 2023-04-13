@@ -1,0 +1,13 @@
+<div>
+ <input type="text" class="form-control w-50" 
+ #uName
+ (keyup) = "setUserName(uName.value)"
+ [(ngModel)] = "username"
+ />
+ <p>Tee username is {{username}}</p>
+ <button class="btn btn-primary" 
+ [disabled] = "isEmpty()"
+ (click) = "updateUserName()"
+ >Click Me</button>
+ 
+</div>
